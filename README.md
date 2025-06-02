@@ -33,7 +33,7 @@ At its core, **truthieGO** believes that **education is the best defence**. By t
 
 Currently in development using **Godot**, designed for mobile platforms.
 
-## 📷 Screenshot
+## 📷 Poster
 
 ![truthieGO description](./TRUTHIE%20GO%20HOME.jpg)
 
