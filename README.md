@@ -35,7 +35,7 @@ Currently in development using **Godot**, designed for mobile platforms.
 
 ## 📷 Screenshot
 
-![truthieGO description](./assets/truthiego.png)
+![truthieGO description](./TRUTHIE GO HOME.jpg)
 
 ## 🛠 Tech Stack
 
