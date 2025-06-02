@@ -43,6 +43,5 @@ Currently in development using **Godot**, designed for mobile platforms.
 - **Firebase (planned)** – for authentication, leaderboard, and inventory  
 - **Pixel Art** – for avatars, landmarks, and UI
 
-## 📌 Contributing
 
 Coming soon.
