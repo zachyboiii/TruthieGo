@@ -6,7 +6,7 @@
 
 ## 📱 Overview
 
-**truthieGO** is a gamified mobile app designed to empower users in the fight against online misinformation and cyber threats. Set on a vibrant Singapore-themed board filled with iconic MRT stops and local landmarks, players roll dice and land on tiles to face interactive challenges.
+**TruthieGO** is a gamified mobile app designed to empower users in the fight against online misinformation and cyber threats. Set on a vibrant Singapore-themed board filled with iconic MRT stops and local landmarks, players roll dice and land on tiles to face interactive challenges.
 
 As players progress, they encounter fast-paced quizzes, story-based minigames, and decision-making scenarios that focus on:
 
@@ -15,9 +15,9 @@ As players progress, they encounter fast-paced quizzes, story-based minigames, a
 - 🎭 Detecting deepfakes  
 - 💳 Recognizing fraud patterns  
 
-## 🎯 Why truthieGO?
+## 🎯 Why TruthieGO?
 
-At its core, **truthieGO** believes that **education is the best defence**. By transforming digital literacy into an exciting, competitive game, the app equips users with essential cybersecurity skills for today’s digital world.
+At its core, **TruthieGO** believes that **education is the best defence**. By transforming digital literacy into an exciting, competitive game, the app equips users with essential cybersecurity skills for today’s digital world.
 
 ## 🏆 Gameplay Features
 
