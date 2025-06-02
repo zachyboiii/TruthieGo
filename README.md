@@ -1,5 +1,5 @@
 
-# truthieGO
+# TruthieGO
 
 > **Problem Statement**  
 > **How might we create a gamified mobile experience that equips users with the real-world skills to detect, report, and counter misinformation and cyber threats while making learning fun and rewarding?**
@@ -35,7 +35,7 @@ Currently in development using **Godot**, designed for mobile platforms.
 
 ## 📷 Screenshot
 
-![truthieGO description](./TRUTHIE GO HOME.jpg)
+![truthieGO description](./TRUTHIE%20GO%20HOME.jpg)
 
 ## 🛠 Tech Stack
 
