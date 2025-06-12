@@ -44,6 +44,14 @@ Fully developed using **Godot**, designed for mobile platforms. Possible future 
 - **Pixel Art** – created using stable diffusion
 - **Quiver** - backend database extension to Godot for storing leaderboards
 
+## App Architecture
+
+<div align="center">
+  <img src="./App%20Architecture.png" alt="TruthieGO App Architecture" width="600"/>
+  <p><em>System architecture overview</em></p>
+</div>
+
+
 
 
 ## Project Done By:
