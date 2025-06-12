@@ -31,7 +31,7 @@ At its core, **TruthieGO** believes that **education is the best defence**. By t
 
 ## 🚧 Status
 
-Currently in development using **Godot**, designed for mobile platforms.
+Fully developed using **Godot**, designed for mobile platforms. Possible future plans include collaborating with government bodies such as SPF or IMDA to improve on our database of real world scenarios for the games and also to scale our backend with AWS EC2.
 
 ## 📷 Poster
 
@@ -40,8 +40,10 @@ Currently in development using **Godot**, designed for mobile platforms.
 ## 🛠 Tech Stack
 
 - **Godot** – for mobile game development  
-- **Firebase (planned)** – for authentication, leaderboard, and inventory  
-- **Pixel Art** – for avatars, landmarks, and UI
+- **Firebase (Realtime DB and Auth)** – for authentication, truthbucks and cybershields 
+- **Pixel Art** – created using stable diffusion
+- **Quiver** - backend database extension to Godot for storing leaderboards
+
 
 
 Coming soon.
