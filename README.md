@@ -55,11 +55,7 @@ Fully developed using **Godot**, designed for mobile platforms. Possible future 
 
 
 ## Project Done By:
-Brandon Kim
-Seet Ru Suan Marilyn
-Javier Chan
-Vernice Kah
-Zachary Lee
+Brandon Kim, Seet Ru Suan Marilyn, Javier Chan, Vernice Kah and Zachary Lee
 
 This project was done by team Fubobo for the 2025 DSTA BrainHack under the CODE_EXP competitive category.
 
