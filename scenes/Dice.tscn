@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://bb46nksfliu1c"]
+
+[ext_resource type="Script" uid="uid://bfyj2o0efvs4c" path="res://scripts/dice.gd" id="1_dkpul"]
+[ext_resource type="Texture2D" uid="uid://c2hx68podcovp" path="res://assets/Fubobo CODEEXP 2025 (36).png" id="1_ohlpd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk6ea"]
+atlas = ExtResource("1_ohlpd")
+region = Rect2(0, 0, 313, 394)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dl7g7"]
+atlas = ExtResource("1_ohlpd")
+region = Rect2(313, 0, 313, 394)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffb8l"]
+atlas = ExtResource("1_ohlpd")
+region = Rect2(626, 0, 313, 394)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nivpc"]
+atlas = ExtResource("1_ohlpd")
+region = Rect2(0, 394, 313, 394)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i17ab"]
+atlas = ExtResource("1_ohlpd")
+region = Rect2(313, 394, 313, 394)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujreh"]
+atlas = ExtResource("1_ohlpd")
+region = Rect2(626, 394, 313, 394)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u68ky"]
+resource_name = "ro"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fk6ea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dl7g7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffb8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nivpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i17ab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujreh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Dice" type="Node2D"]
+script = ExtResource("1_dkpul")
+
+[node name="DiceSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u68ky")
+frame_progress = 0.406078
+speed_scale = 0.5

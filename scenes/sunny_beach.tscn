@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3gqnva0tqeei"]
+
+[ext_resource type="Texture2D" uid="uid://bvqpddqea0ywx" path="res://assets/Progress.png" id="1_iyl78"]
+[ext_resource type="Texture2D" uid="uid://cgyh5151dsp1j" path="res://assets/Glowing SunnyBeach.png" id="2_jttma"]
+[ext_resource type="Script" uid="uid://d0dr5licvp02o" path="res://scripts/enter_world.gd" id="2_vsau5"]
+
+[node name="SunnyBeach" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.00162, 1)
+texture = ExtResource("1_iyl78")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-2.99999, -91)
+scale = Vector2(0.598136, 0.594535)
+texture = ExtResource("2_jttma")
+
+[node name="EnterWorld" type="TextureButton" parent="."]
+offset_left = -246.0
+offset_top = 608.0
+offset_right = -206.0
+offset_bottom = 648.0
+scale = Vector2(12.3026, 3.8506)
+script = ExtResource("2_vsau5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="EnterWorld" to="EnterWorld" method="_on_pressed"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://uve7nuijtl4t"]
+
+[ext_resource type="Script" uid="uid://cpoyhcdb311t7" path="res://scripts/wrong_answer_2.gd" id="1_3a8ui"]
+[ext_resource type="Texture2D" uid="uid://bmxm5846ghhxh" path="res://assets/fakeNewsGame/wrongchoice2.png" id="1_wmmiv"]
+[ext_resource type="Texture2D" uid="uid://ddijvcr2uprm1" path="res://assets/fakeNewsGame/nextbutton.png" id="2_n6neo"]
+
+[node name="wrong_answer2" type="Node2D"]
+script = ExtResource("1_3a8ui")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -32.0
+offset_top = -106.0
+offset_right = 1109.0
+offset_bottom = 2152.0
+size_flags_horizontal = 4
+color = Color(0.807843, 0.905882, 1, 1)
+
+[node name="wrong_ans2" type="Sprite2D" parent="."]
+position = Vector2(536, 957)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("1_wmmiv")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 574.0
+offset_top = 1611.0
+offset_right = 1514.0
+offset_bottom = 2399.0
+scale = Vector2(0.456044, 0.460655)
+texture_normal = ExtResource("2_n6neo")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

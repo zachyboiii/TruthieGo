@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://p4x76rmofkoe"]
+
+[ext_resource type="Texture2D" uid="uid://c1rurj15yo1ei" path="res://assets/username.png" id="1_ue5ek"]
+[ext_resource type="Texture2D" uid="uid://1me8xjs7u52p" path="res://assets/empty_button.png" id="1_y57ij"]
+[ext_resource type="Script" uid="uid://b8lsxeblrqu0g" path="res://scripts/username_pic.gd" id="2_y57ij"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ue5ek"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="username" type="Node2D"]
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 240.0
+offset_top = 1672.0
+offset_right = 633.0
+offset_bottom = 1746.0
+scale = Vector2(1.5124, 1.9673)
+texture_normal = ExtResource("1_y57ij")
+metadata/_edit_use_anchors_ = true
+
+[node name="username_pic" type="Sprite2D" parent="."]
+position = Vector2(542, 963)
+scale = Vector2(1.94825, 1.59012)
+texture = ExtResource("1_ue5ek")
+script = ExtResource("2_y57ij")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+custom_minimum_size = Vector2(120, 0)
+offset_left = 138.0
+offset_top = 1126.0
+offset_right = 388.0
+offset_bottom = 1157.0
+scale = Vector2(3, 3)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ue5ek")
+placeholder_text = "\"Type Username here\""
+max_length = 15
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="TextureButton" to="username_pic" method="_on_texture_button_pressed"]

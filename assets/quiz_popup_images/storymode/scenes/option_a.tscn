@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwbuyk5c8qxje"]
+
+[ext_resource type="Script" uid="uid://tmj3rr468p4" path="res://scripts/option_a.gd" id="1_5d4fv"]
+[ext_resource type="Texture2D" uid="uid://pocdbddui2c8" path="res://assets/afirstchat.png" id="1_w0lvp"]
+
+[node name="OptionA" type="Node2D"]
+script = ExtResource("1_5d4fv")
+
+[node name="presscreen" type="Button" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(27.0895, 48.2852)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(542, 958)
+scale = Vector2(1.60517, 1.32512)
+texture = ExtResource("1_w0lvp")
+
+[connection signal="pressed" from="presscreen" to="." method="_on_presscreen_pressed"]

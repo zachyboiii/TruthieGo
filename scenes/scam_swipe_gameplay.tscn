@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://buma4kv0rrv2e"]
+
+[ext_resource type="Script" uid="uid://1e73qv6lck7w" path="res://scripts/scam_swipe_gameplay.gd" id="1_u0aeu"]
+[ext_resource type="PackedScene" uid="uid://8ejcw44xq7b4" path="res://scenes/life_bar.tscn" id="3_cm2jl"]
+[ext_resource type="PackedScene" uid="uid://cfouypjed4j2a" path="res://scenes/scam_profile.tscn" id="3_p3wmn"]
+[ext_resource type="PackedScene" uid="uid://bys4ci8w0lk8s" path="res://scenes/legit_profile.tscn" id="4_ahh4h"]
+[ext_resource type="PackedScene" uid="uid://cwnc152yuukyt" path="res://scenes/scam_profile2.tscn" id="5_p3wmn"]
+[ext_resource type="PackedScene" uid="uid://ctns8gk06cbj4" path="res://scenes/scam_swipe_win.tscn" id="6_ahh4h"]
+[ext_resource type="PackedScene" uid="uid://bedvdc12yc3w6" path="res://scenes/scam_swipe_lose.tscn" id="7_45ubx"]
+
+[node name="scam_swipe_gameplay" type="Node2D"]
+script = ExtResource("1_u0aeu")
+metadata/_edit_vertical_guides_ = [-64.0]
+
+[node name="life_bar" parent="." instance=ExtResource("3_cm2jl")]
+position = Vector2(5.375, -134)
+
+[node name="scam_profile" parent="." instance=ExtResource("3_p3wmn")]
+position = Vector2(3, 6)
+
+[node name="legit_profile" parent="." instance=ExtResource("4_ahh4h")]
+position = Vector2(4.375, 1)
+
+[node name="scam_profile2" parent="." instance=ExtResource("5_p3wmn")]
+position = Vector2(4.375, 4)
+
+[node name="win" parent="." instance=ExtResource("6_ahh4h")]
+visible = false
+position = Vector2(4, 7)
+scale = Vector2(0.1, 0.1)
+
+[node name="lose" parent="." instance=ExtResource("7_45ubx")]
+visible = false
+position = Vector2(7.62939e-06, -34)
+scale = Vector2(0.2, 0.2)

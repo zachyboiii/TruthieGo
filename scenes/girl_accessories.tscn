@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxsowvp7glu20"]
+
+[ext_resource type="Script" uid="uid://dqwm3kn1ybgco" path="res://scripts/girl_accessories.gd" id="1_5fpkl"]
+[ext_resource type="Texture2D" uid="uid://bxffchdjbq3xu" path="res://assets/shop/Dressing Room Page-6.png" id="2_1cayo"]
+
+[node name="girl_accessories" type="Node2D"]
+script = ExtResource("1_5fpkl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(284.394, -24.157)
+scale = Vector2(2.73992, 2.2555)
+texture = ExtResource("2_1cayo")
+
+[node name="TextureButton(BackToBoard)" type="TextureButton" parent="."]
+offset_left = -202.0
+offset_top = -921.0
+offset_right = -162.0
+offset_bottom = -881.0
+scale = Vector2(3.7044, 2.99567)
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(284.394, -24.157)
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 418.0
+offset_top = -35.0
+offset_right = 458.0
+offset_bottom = 5.0
+scale = Vector2(4.06975, 2.74316)
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+offset_left = 230.0
+offset_top = -42.0
+offset_right = 270.0
+offset_bottom = -2.0
+scale = Vector2(2.84618, 3.06415)
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+offset_left = 20.0
+offset_top = -37.0
+offset_right = 60.0
+offset_bottom = 3.0
+scale = Vector2(3.26305, 2.69426)
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+offset_left = -171.0
+offset_top = -22.0
+offset_right = -131.0
+offset_bottom = 18.0
+scale = Vector2(2.42067, 1.97354)
+
+[connection signal="pressed" from="TextureButton(BackToBoard)" to="." method="_on_texture_button_back_to_board_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="TextureButton4" to="." method="_on_texture_button_4_pressed"]

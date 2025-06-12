@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcjsdje47dw4x"]
+
+[ext_resource type="Script" uid="uid://bh4ie4rc78lv" path="res://scripts/auth.gd" id="1_3jwgv"]
+[ext_resource type="Texture2D" uid="uid://1me8xjs7u52p" path="res://assets/login/empty_button.png" id="2_kud8d"]
+[ext_resource type="Texture2D" uid="uid://710qf6wt2j60" path="res://assets/login/email_pw.png" id="3_m8rys"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8n18e"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_brbbq"]
+font_size = 10
+font_color = Color(1, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3jwgv")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="register_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 1531.0
+offset_right = 674.0
+offset_bottom = 1605.0
+scale = Vector2(1.27556, 1.71776)
+texture_normal = ExtResource("2_kud8d")
+
+[node name="emailpw" type="Sprite2D" parent="."]
+position = Vector2(537, 959)
+scale = Vector2(1.47395, 1.21611)
+texture = ExtResource("3_m8rys")
+
+[node name="email" type="LineEdit" parent="."]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 0
+offset_left = 147.0
+offset_top = 1077.0
+offset_right = 397.0
+offset_bottom = 1108.0
+scale = Vector2(3, 3)
+theme_override_styles/normal = SubResource("StyleBoxFlat_8n18e")
+placeholder_text = "Type your e-mail"
+max_length = 40
+
+[node name="password" type="LineEdit" parent="."]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 0
+offset_left = 141.0
+offset_top = 1294.0
+offset_right = 391.0
+offset_bottom = 1325.0
+scale = Vector2(3, 3)
+theme_override_styles/normal = SubResource("StyleBoxFlat_8n18e")
+placeholder_text = "Type your password"
+max_length = 40
+
+[node name="login_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 1677.0
+offset_right = 321.0
+offset_bottom = 1717.0
+scale = Vector2(12.3235, 3.10822)
+
+[node name="error_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 1452.0
+offset_right = 478.0
+offset_bottom = 1475.0
+scale = Vector2(3.04266, 2.06997)
+label_settings = SubResource("LabelSettings_brbbq")
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="pressed" from="register_button" to="." method="_on_register_button_pressed"]
+[connection signal="pressed" from="login_button" to="." method="_on_login_button_pressed"]

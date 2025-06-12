@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs7yerf0wnj5q"]
+
+[ext_resource type="Texture2D" uid="uid://d1cxijxio1n7k" path="res://assets/Winchat.png" id="1_alboe"]
+[ext_resource type="Script" uid="uid://by02olhidjb06" path="res://option_c.gd" id="1_j4uuj"]
+[ext_resource type="Texture2D" uid="uid://dws8jx14wutet" path="res://assets/Abutton.png" id="2_gw72q"]
+
+[node name="option_c" type="Node2D"]
+script = ExtResource("1_j4uuj")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 305.0
+offset_top = 1649.0
+offset_right = 698.0
+offset_bottom = 1723.0
+scale = Vector2(1.24316, 1.87953)
+texture_normal = ExtResource("2_gw72q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(539, 955)
+scale = Vector2(1.66974, 1.36756)
+texture = ExtResource("1_alboe")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

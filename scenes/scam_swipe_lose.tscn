@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://bedvdc12yc3w6"]
+
+[ext_resource type="Script" uid="uid://cg32mikxcvacy" path="res://scripts/scam_swipe_lose.gd" id="1_8qr6v"]
+[ext_resource type="Texture2D" uid="uid://6kfsvwuaixpm" path="res://assets/scamSwipe/game_over.png" id="1_a5bqv"]
+[ext_resource type="Texture2D" uid="uid://bvy14y3j1ry2j" path="res://assets/scamSwipe/scam_swipe_lose.png" id="2_alj87"]
+[ext_resource type="FontFile" uid="uid://c0fecrpl10ccj" path="res://assets/scamSwipe/PixelifySans-VariableFont_wght.ttf" id="3_r44po"]
+[ext_resource type="Texture2D" uid="uid://d3efwp1ridg5" path="res://assets/scamSwipe/lose_shield.png" id="4_yj0ov"]
+[ext_resource type="Texture2D" uid="uid://csex32at0lhjj" path="res://assets/scamSwipe/end_button.png" id="5_sgf0w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8o1j8"]
+atlas = ExtResource("5_sgf0w")
+region = Rect2(27.9105, 15.0665, 163.977, 56.1556)
+
+[node name="lose" type="Node2D"]
+script = ExtResource("1_8qr6v")
+
+[node name="GameOver" type="Sprite2D" parent="."]
+position = Vector2(-0.999969, -312)
+scale = Vector2(2.56481, 2.56481)
+texture = ExtResource("1_a5bqv")
+
+[node name="ScamSwipeLose" type="Sprite2D" parent="."]
+position = Vector2(4.99988, 9.99994)
+scale = Vector2(2.16984, 2.16984)
+texture = ExtResource("2_alj87")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -210.0
+offset_top = 425.0
+offset_right = 206.0
+offset_bottom = 682.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_r44po")
+theme_override_font_sizes/font_size = 40
+text = "Oh no! You lost!
+
+Hope you learnt more
+about scams and try
+again next time!"
+horizontal_alignment = 1
+
+[node name="LoseShield" type="Sprite2D" parent="."]
+position = Vector2(0, 739)
+scale = Vector2(1.23231, 1.23231)
+texture = ExtResource("4_yj0ov")
+
+[node name="EndButton" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 5.00001
+offset_top = 1702.0
+offset_right = 5.00001
+offset_bottom = 1702.0
+scale = Vector2(4.43692, 4.43692)
+
+[node name="end" type="TextureButton" parent="EndButton"]
+layout_mode = 0
+offset_left = -29.2996
+offset_top = -198.111
+offset_right = 133.7
+offset_bottom = -142.111
+scale = Vector2(0.35, 0.35)
+texture_normal = SubResource("AtlasTexture_8o1j8")

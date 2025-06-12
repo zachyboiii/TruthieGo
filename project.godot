@@ -10,7 +10,38 @@ config_version=5
 
 [application]
 
-config/name="TruthieGO"
-run/main_scene="uid://b4xakbqx8ss37"
+config/name="TruthieGO_edit"
+run/main_scene="uid://dq3em158ndk"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*res://scripts/globals.gd"
+GlobalAudioStreamPlayer="*res://Music/audio_stream_player.tscn"
+Leaderboards="*res://addons/quiver_leaderboards/leaderboards.tscn"
+PlayerAccounts="*res://addons/quiver_player_accounts/player_accounts.tscn"
+QuiverLeaderboards="*res://addons/quiver_leaderboards/leaderboards.gd"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/stretch/mode="viewport"
+window/handheld/orientation=1
+
+[dotnet]
+
+project/assembly_name="TruthieGO"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/quiver_leaderboards/plugin.cfg", "res://addons/quiver_player_accounts/plugin.cfg")
+
+[quiver]
+
+general/auth_token="V777gRU04s3p76VvpGzeBBbqKmDWHyb7jU4mDkXd"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

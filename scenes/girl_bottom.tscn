@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cor5f6xql0bgk"]
+
+[ext_resource type="Script" uid="uid://cflygvhhx2fur" path="res://scripts/girl_bottom.gd" id="1_d1b35"]
+[ext_resource type="Texture2D" uid="uid://fqbq0crbv3tr" path="res://assets/shop/Dressing Room Page-4.png" id="2_laquj"]
+
+[node name="girl_bottom" type="Node2D"]
+script = ExtResource("1_d1b35")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -472.0
+offset_top = -888.0
+offset_right = -432.0
+offset_bottom = -848.0
+scale = Vector2(3.14319, 2.7273)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.73992, 2.2555)
+texture = ExtResource("2_laquj")
+
+[node name="TextureButton(Shoes)" type="TextureButton" parent="."]
+offset_left = 135.0
+offset_top = -17.0
+offset_right = 175.0
+offset_bottom = 23.0
+scale = Vector2(3.7044, 2.99567)
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton(Shoes)" to="." method="_on_texture_button_shoes_pressed"]

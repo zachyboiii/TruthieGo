@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwy367btmqxn2"]
+
+[ext_resource type="Texture2D" uid="uid://bo50ojx2mhoqs" path="res://assets/email_pw.png" id="1_6ud6b"]
+[ext_resource type="Script" uid="uid://d6u3e24fgfhw" path="res://scripts/email_pw.gd" id="1_8v43l"]
+[ext_resource type="Texture2D" uid="uid://1me8xjs7u52p" path="res://assets/empty_button.png" id="3_qgu7e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ud6b"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="email_pw" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8v43l")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 253.0
+offset_top = 1651.0
+offset_right = 646.0
+offset_bottom = 1725.0
+scale = Vector2(1.42786, 1.90632)
+texture_normal = ExtResource("3_qgu7e")
+
+[node name="emailpw" type="Sprite2D" parent="."]
+position = Vector2(534, 955)
+scale = Vector2(1.69718, 1.39146)
+texture = ExtResource("1_6ud6b")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+custom_minimum_size = Vector2(120, 0)
+offset_left = 147.0
+offset_top = 1077.0
+offset_right = 397.0
+offset_bottom = 1108.0
+scale = Vector2(3, 3)
+theme_override_styles/normal = SubResource("StyleBoxFlat_6ud6b")
+placeholder_text = "Type your e-mail"
+max_length = 15
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+custom_minimum_size = Vector2(120, 0)
+offset_left = 141.0
+offset_top = 1294.0
+offset_right = 391.0
+offset_bottom = 1325.0
+scale = Vector2(3, 3)
+theme_override_styles/normal = SubResource("StyleBoxFlat_6ud6b")
+placeholder_text = "Type your password"
+max_length = 15
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

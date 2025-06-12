@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvxcl1qijx6xi"]
+
+[ext_resource type="Texture2D" uid="uid://dykl8c3ilalfd" path="res://assets/scamSwipe/full_life.png" id="1_naohr"]
+[ext_resource type="Texture2D" uid="uid://vnlumqyw60rm" path="res://assets/scamSwipe/lost_life.png" id="2_h857v"]
+
+[node name="lives" type="Node2D"]
+
+[node name="FullLife" type="Sprite2D" parent="."]
+position = Vector2(-2.65625, -2.57812)
+scale = Vector2(0.09325, 0.0915854)
+texture = ExtResource("1_naohr")
+
+[node name="LostLife" type="Sprite2D" parent="."]
+position = Vector2(-2.90625, -2.96875)
+scale = Vector2(0.0948705, 0.0863095)
+texture = ExtResource("2_h857v")

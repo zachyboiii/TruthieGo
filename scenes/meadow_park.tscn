@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://djf4oco7yhqyj"]
+
+[ext_resource type="Texture2D" uid="uid://bvqpddqea0ywx" path="res://assets/Progression/Progress.png" id="1_ke8e6"]
+[ext_resource type="Texture2D" uid="uid://b7tdrichmg15i" path="res://assets/Progression/Glowing MeadowPark.png" id="2_w0dfp"]
+[ext_resource type="Texture2D" uid="uid://b5q8v1dwqu57y" path="res://assets/Progression/LockedSunnyBeach.png" id="2_wm2cx"]
+[ext_resource type="Script" uid="uid://d0dr5licvp02o" path="res://scripts/enter_world.gd" id="3_wm2cx"]
+
+[node name="meadow_park" type="Node2D"]
+position = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.00356, 1.0058)
+texture = ExtResource("1_ke8e6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1, -38)
+texture = ExtResource("2_wm2cx")
+
+[node name="MeadowPark Selected" type="TextureButton" parent="."]
+offset_left = -283.0
+offset_top = 219.0
+offset_right = 437.0
+offset_bottom = 703.0
+scale = Vector2(0.747357, 0.696798)
+texture_normal = ExtResource("2_w0dfp")
+
+[node name="EnterWorld" type="TextureButton" parent="."]
+offset_left = -246.0
+offset_top = 608.0
+offset_right = -206.0
+offset_bottom = 648.0
+scale = Vector2(12.3026, 3.8506)
+script = ExtResource("3_wm2cx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="EnterWorld" to="EnterWorld" method="_on_pressed"]

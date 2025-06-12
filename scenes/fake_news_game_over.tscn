@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://doyxdlo60dspj"]
+
+[ext_resource type="Texture2D" uid="uid://whwom63beksn" path="res://assets/fakeNewsGame/fakenews_gameover.png" id="1_s3qof"]
+[ext_resource type="Script" uid="uid://cg32mikxcvacy" path="res://scripts/scam_swipe_lose.gd" id="1_urx7u"]
+[ext_resource type="Texture2D" uid="uid://csex32at0lhjj" path="res://assets/scamSwipe/end_button.png" id="3_nwh5w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnkdj"]
+atlas = ExtResource("3_nwh5w")
+region = Rect2(27.9105, 15.0665, 163.977, 56.1556)
+
+[node name="fake_news_game_over" type="Node2D"]
+script = ExtResource("1_urx7u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -19.0
+offset_top = -65.0
+offset_right = 1122.0
+offset_bottom = 2193.0
+size_flags_horizontal = 4
+color = Color(0.807843, 0.905882, 1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(559, 950)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_s3qof")
+
+[node name="EndButton" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 5.00001
+offset_top = 1702.0
+offset_right = 5.00001
+offset_bottom = 1702.0
+scale = Vector2(4.43692, 4.43692)
+
+[node name="end" type="TextureButton" parent="EndButton"]
+layout_mode = 0
+offset_left = 80.2358
+offset_top = -4.28225
+offset_right = 243.235
+offset_bottom = 51.7178
+scale = Vector2(0.53, 0.53)
+texture_normal = SubResource("AtlasTexture_bnkdj")

@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bs8d86etfpt0t"]
+
+[ext_resource type="Script" uid="uid://c2c04aa47ccwi" path="res://scripts/hacked_screen.gd" id="1_be7vu"]
+[ext_resource type="Texture2D" uid="uid://ca84b5yai1vdn" path="res://assets/Game bg.png" id="2_j8ygy"]
+[ext_resource type="Texture2D" uid="uid://c208pn4h5d7na" path="res://assets/quiz_popup_images/hacked_image.png" id="3_6i3e0"]
+[ext_resource type="Texture2D" uid="uid://btqdxpr3rf731" path="res://assets/quiz_popup_images/cross button.png" id="4_kpttn"]
+
+[node name="hacked_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_be7vu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(553, 932)
+scale = Vector2(1.31842, 1.31842)
+texture = ExtResource("2_j8ygy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(561, 892)
+scale = Vector2(2.10662, 2.10662)
+texture = ExtResource("3_6i3e0")
+
+[node name="cross_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 901.0
+offset_top = 87.0
+offset_right = 1005.0
+offset_bottom = 191.0
+texture_normal = ExtResource("4_kpttn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="cross_button" to="." method="_on_cross_button_pressed"]

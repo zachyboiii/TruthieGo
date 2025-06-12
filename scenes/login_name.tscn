@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://7yg8x5nloq7p"]
+
+[ext_resource type="Script" uid="uid://drr6qj3y577s6" path="res://scripts/name.gd" id="1_uawyd"]
+[ext_resource type="Texture2D" uid="uid://1me8xjs7u52p" path="res://assets/login/empty_button.png" id="2_sfg2e"]
+[ext_resource type="Texture2D" uid="uid://c1rurj15yo1ei" path="res://assets/login/username.png" id="3_cmqyo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15jvs"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="login_name" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uawyd")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="lets_go_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 1658.0
+offset_right = 644.0
+offset_bottom = 1732.0
+scale = Vector2(1.45779, 2.04249)
+texture_normal = ExtResource("2_sfg2e")
+
+[node name="username" type="Sprite2D" parent="."]
+position = Vector2(541, 961)
+scale = Vector2(1.90424, 1.57361)
+texture = ExtResource("3_cmqyo")
+
+[node name="UsernameLineEdit" type="LineEdit" parent="."]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 0
+offset_left = 145.0
+offset_top = 1121.0
+offset_right = 395.0
+offset_bottom = 1152.0
+scale = Vector2(3, 3)
+theme_override_styles/normal = SubResource("StyleBoxFlat_15jvs")
+placeholder_text = "Type your username"
+max_length = 15
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="pressed" from="lets_go_button" to="." method="_on_lets_go_button_pressed"]

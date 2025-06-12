@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://buhwsuh4dl0cy"]
+
+[ext_resource type="Script" path="res://scripts/login_choosechar(male).gd" id="1_e18wd"]
+[ext_resource type="Texture2D" uid="uid://dkf08rkudvwwc" path="res://assets/login/man.png" id="1_haxe0"]
+[ext_resource type="Texture2D" uid="uid://c4cpc1ec8pj1e" path="res://assets/login/left_arrow.png" id="2_xuggw"]
+[ext_resource type="Texture2D" uid="uid://byk14nmgqh768" path="res://assets/login/right_arrow.png" id="3_1simf"]
+[ext_resource type="Texture2D" uid="uid://1me8xjs7u52p" path="res://assets/login/empty_button.png" id="5_xuggw"]
+
+[node name="login_choosechar(male)" type="Node2D"]
+script = ExtResource("1_e18wd")
+
+[node name="left_button" type="TextureButton" parent="."]
+offset_left = 137.0
+offset_top = 904.0
+offset_right = 530.0
+offset_bottom = 1756.0
+scale = Vector2(0.313408, 0.133928)
+texture_normal = ExtResource("2_xuggw")
+
+[node name="right_button" type="TextureButton" parent="."]
+offset_left = 812.0
+offset_top = 907.0
+offset_right = 1205.0
+offset_bottom = 1759.0
+scale = Vector2(0.337067, 0.120693)
+texture_normal = ExtResource("3_1simf")
+
+[node name="chosen_button" type="TextureButton" parent="."]
+offset_left = 271.0
+offset_top = 1313.0
+offset_right = 664.0
+offset_bottom = 1387.0
+scale = Vector2(1.33102, 1.58093)
+texture_normal = ExtResource("5_xuggw")
+
+[node name="man" type="Sprite2D" parent="."]
+position = Vector2(537, 959)
+scale = Vector2(1.44242, 1.16994)
+texture = ExtResource("1_haxe0")
+
+[connection signal="pressed" from="left_button" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="right_button" to="." method="_on_right_button_pressed"]
+[connection signal="pressed" from="chosen_button" to="." method="_on_chosen_button_pressed"]

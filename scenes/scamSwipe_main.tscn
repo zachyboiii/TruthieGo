@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5dubd32y5y6b"]
+
+[ext_resource type="PackedScene" uid="uid://depi2c2ib77eg" path="res://scenes/scam_swipe.tscn" id="2_8ut44"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+z_index = 5
+position = Vector2(-740, -312)
+
+[node name="ScamSwipe" parent="." instance=ExtResource("2_8ut44")]
+position = Vector2(-741, -314)
+scale = Vector2(4, 4)

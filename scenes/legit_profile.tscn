@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3 uid="uid://bys4ci8w0lk8s"]
+
+[ext_resource type="Script" uid="uid://4mhfy8chni05" path="res://scripts/legit_profile.gd" id="1_6ukkl"]
+[ext_resource type="Texture2D" uid="uid://dw02crlcjcfg" path="res://assets/legit_profile.png" id="1_gwvms"]
+[ext_resource type="Texture2D" uid="uid://d2thbwnq3iax4" path="res://assets/scam_swipe_crossButton.png" id="2_304s5"]
+[ext_resource type="Texture2D" uid="uid://dqwjneh5s4gbs" path="res://assets/scam_swipe_likeButton.png" id="3_6ukkl"]
+[ext_resource type="Texture2D" uid="uid://5xu8jpb0dauc" path="res://assets/legit_warning.png" id="5_x1sk3"]
+[ext_resource type="Texture2D" uid="uid://cbbt3nr1velgx" path="res://assets/next_button.png" id="6_x1sk3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1sk3"]
+atlas = ExtResource("2_304s5")
+region = Rect2(27.1702, 0, 148.83, 151.701)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gg3h3"]
+atlas = ExtResource("3_6ukkl")
+region = Rect2(11.5181, 3.6818, 149.901, 147.15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etcy0"]
+atlas = ExtResource("6_x1sk3")
+region = Rect2(2.12286, 34.7061, 805.987, 423.857)
+
+[node name="legit_profile" type="Node2D"]
+script = ExtResource("1_6ukkl")
+
+[node name="LegitProfile" type="Sprite2D" parent="."]
+position = Vector2(-1.52588e-05, 2.00006)
+scale = Vector2(0.206, 0.206)
+texture = ExtResource("1_gwvms")
+
+[node name="cross_button" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="cross" type="TextureButton" parent="cross_button"]
+layout_mode = 0
+offset_left = -50.0
+offset_top = 80.0
+offset_right = 98.0
+offset_bottom = 231.0
+scale = Vector2(0.17, 0.17)
+texture_normal = SubResource("AtlasTexture_x1sk3")
+
+[node name="like_button" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="like" type="TextureButton" parent="like_button"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 80.0
+offset_right = 174.0
+offset_bottom = 227.0
+scale = Vector2(0.17, 0.17)
+texture_normal = SubResource("AtlasTexture_gg3h3")
+
+[node name="LegitWarning" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1, 0)
+scale = Vector2(0.464, 0.464)
+texture = ExtResource("5_x1sk3")
+
+[node name="next_button" type="Control" parent="LegitWarning"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="next" type="TextureButton" parent="LegitWarning/next_button"]
+layout_mode = 0
+offset_left = -38.7931
+offset_top = 237.069
+offset_right = 777.207
+offset_bottom = 660.069
+scale = Vector2(0.1, 0.1)
+texture_normal = SubResource("AtlasTexture_etcy0")

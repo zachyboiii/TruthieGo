@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://bprle5hqqg24j"]
+
+[ext_resource type="Script" uid="uid://ds56qidvdwqdb" path="res://scripts/fake_news_gameplay.gd" id="1_5h6co"]
+[ext_resource type="Texture2D" uid="uid://uyc4tqusouvu" path="res://assets/fakeNewsGame/spotreal.png" id="2_52mw6"]
+[ext_resource type="PackedScene" uid="uid://dog3nj65n2470" path="res://scenes/false_button.tscn" id="3_0u8co"]
+[ext_resource type="PackedScene" uid="uid://cp6b2xpgdftmt" path="res://scenes/correct_button.tscn" id="4_sw8wi"]
+
+[sub_resource type="GDScript" id="GDScript_0u8co"]
+script/source = "extends TextureButton
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="fake_news_gameplay" type="Node2D"]
+script = ExtResource("1_5h6co")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -13.0
+offset_top = -122.0
+offset_right = 1128.0
+offset_bottom = 2136.0
+size_flags_horizontal = 4
+color = Color(0.807843, 0.905882, 1, 1)
+
+[node name="realmrt" type="Sprite2D" parent="."]
+position = Vector2(531, 959)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("2_52mw6")
+
+[node name="correct_button" parent="." instance=ExtResource("4_sw8wi")]
+offset_left = 13.0
+offset_top = 1514.0
+offset_right = 953.0
+offset_bottom = 2302.0
+scale = Vector2(0.582437, 0.559077)
+
+[node name="false_button" parent="." instance=ExtResource("3_0u8co")]
+offset_left = 500.0
+offset_top = 1504.0
+offset_right = 1440.0
+offset_bottom = 2292.0
+scale = Vector2(0.593191, 0.580847)
+script = SubResource("GDScript_0u8co")
+
+[connection signal="pressed" from="correct_button" to="." method="_on_correct_button_pressed"]
+[connection signal="pressed" from="false_button" to="." method="_on_false_button_pressed"]

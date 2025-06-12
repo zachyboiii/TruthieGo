@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dog3nj65n2470"]
+
+[ext_resource type="Texture2D" uid="uid://dcxcfkunbo6x5" path="res://assets/fakeNewsGame/realbutton.png" id="1_6l4t0"]
+
+[node name="false_button" type="TextureButton"]
+texture_normal = ExtResource("1_6l4t0")

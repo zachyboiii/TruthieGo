@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dphkawdxkvli3"]
+
+[ext_resource type="Texture2D" uid="uid://c8hpd4o83fca2" path="res://assets/Leaderboards button.png" id="1_rn7xn"]
+[ext_resource type="Script" uid="uid://dlb60ysbm08lb" path="res://scripts/ShopPage.gd" id="1_vwa2p"]
+
+[node name="ShopPage" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vwa2p")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_rn7xn")

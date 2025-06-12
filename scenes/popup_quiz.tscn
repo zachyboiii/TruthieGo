@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://c5qc5yfkii65i"]
+
+[ext_resource type="Script" uid="uid://bs15tp0m55jum" path="res://scripts/popup_quiz.gd" id="1_f1b1a"]
+[ext_resource type="Texture2D" uid="uid://bqn3j2q0worx0" path="res://assets/quiz_popup_images/quiz popup (2).png" id="2_ygvye"]
+[ext_resource type="Texture2D" uid="uid://bnp5lccihbpr0" path="res://assets/quiz_popup_images/no_button.png" id="3_fq11f"]
+[ext_resource type="Texture2D" uid="uid://btqdxpr3rf731" path="res://assets/quiz_popup_images/cross button.png" id="4_kgbqb"]
+[ext_resource type="Texture2D" uid="uid://cdq0d3hfrormq" path="res://assets/quiz_popup_images/yes_button.png" id="5_3c3kb"]
+[ext_resource type="Texture2D" uid="uid://ca84b5yai1vdn" path="res://assets/Game bg.png" id="6_ygvye"]
+
+[node name="popup quiz" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 283.0
+offset_top = 298.0
+offset_right = 283.0
+offset_bottom = 298.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_f1b1a")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="quiz_popup" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(553, 932)
+scale = Vector2(2.41768, 2.41768)
+texture = ExtResource("2_ygvye")
+
+[node name="no_button" type="TextureButton" parent="CanvasLayer"]
+offset_left = 212.0
+offset_top = 1245.0
+offset_right = 569.0
+offset_bottom = 1543.0
+texture_normal = ExtResource("3_fq11f")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="cross_button" type="TextureButton" parent="CanvasLayer"]
+offset_left = 852.0
+offset_top = 353.0
+offset_right = 913.0
+offset_bottom = 414.0
+texture_normal = ExtResource("4_kgbqb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="yes_button" type="TextureButton" parent="CanvasLayer"]
+offset_left = 520.0
+offset_top = 1235.0
+offset_right = 929.0
+offset_bottom = 1578.0
+texture_normal = ExtResource("5_3c3kb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(274, 788)
+scale = Vector2(1.31842, 1.31842)
+texture = ExtResource("6_ygvye")
+
+[connection signal="pressed" from="CanvasLayer/no_button" to="." method="_on_no_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/cross_button" to="." method="_on_cross_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/yes_button" to="." method="_on_yes_button_pressed"]

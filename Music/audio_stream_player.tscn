@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3mcg46vhfrwb"]
+
+[ext_resource type="AudioStream" uid="uid://04q1cxlw1hpw" path="res://Music/Pokemon-RubySapphireEmerald-Littleroot-Town.ogg" id="1_wfewh"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_wfewh")
+autoplay = true

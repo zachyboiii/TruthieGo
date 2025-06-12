@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://h1cab0bdmben"]
+
+[ext_resource type="Script" uid="uid://cgm8n7f3cgx7t" path="res://scripts/popup_quiz_virus_found.gd" id="1_bvt84"]
+[ext_resource type="Texture2D" uid="uid://ca84b5yai1vdn" path="res://assets/Game bg.png" id="2_g1fgb"]
+[ext_resource type="Texture2D" uid="uid://dsuqb6vjy8eb6" path="res://assets/quiz_popup_images/virus_found_image.png" id="3_8cg3w"]
+[ext_resource type="Texture2D" uid="uid://qx7xs2dbp0sy" path="res://assets/quiz_popup_images/start_antivirus_button.png" id="4_05qmh"]
+[ext_resource type="Texture2D" uid="uid://d2rjwlgetgbtm" path="res://assets/quiz_popup_images/ignore_button.png" id="5_odwtd"]
+[ext_resource type="Texture2D" uid="uid://btqdxpr3rf731" path="res://assets/quiz_popup_images/cross button.png" id="6_af5vh"]
+
+[node name="popup_quiz_virus_found" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bvt84")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(553, 932)
+scale = Vector2(1.31842, 1.31842)
+texture = ExtResource("2_g1fgb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(561, 911)
+scale = Vector2(1.98626, 1.98626)
+texture = ExtResource("3_8cg3w")
+
+[node name="antivirus_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 1222.0
+offset_right = 642.0
+offset_bottom = 1658.0
+texture_normal = ExtResource("4_05qmh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ignore_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 1239.0
+offset_right = 1018.0
+offset_bottom = 1672.0
+texture_normal = ExtResource("5_odwtd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="cross_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 276.0
+offset_right = 965.0
+offset_bottom = 337.0
+texture_normal = ExtResource("6_af5vh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="antivirus_button" to="." method="_on_antivirus_button_pressed"]
+[connection signal="pressed" from="ignore_button" to="." method="_on_ignore_button_pressed"]
+[connection signal="pressed" from="cross_button" to="." method="_on_cross_button_pressed"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgws0o3ucb51w"]
+
+[ext_resource type="Script" uid="uid://3e6h1xipctec" path="res://scripts/login_loadingpage.gd" id="1_kkm4o"]
+[ext_resource type="Texture2D" uid="uid://bggl8qv6202rk" path="res://assets/login/login_loadingpage.png" id="1_t6kxb"]
+
+[node name="login_loadingpage" type="Node2D"]
+script = ExtResource("1_kkm4o")
+
+[node name="loadingpage" type="Sprite2D" parent="."]
+position = Vector2(541, 964)
+scale = Vector2(1.66319, 1.36246)
+texture = ExtResource("1_t6kxb")
+
+[node name="login_timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="login_timer" to="." method="_on_login_timer_timeout"]

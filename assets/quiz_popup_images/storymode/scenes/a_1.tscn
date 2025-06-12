@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpcgm47w3owpq"]
+
+[ext_resource type="Script" uid="uid://h5wqwygndxxc" path="res://scripts/a_1.gd" id="1_3uaje"]
+[ext_resource type="Texture2D" uid="uid://dki4rtf4c7np" path="res://assets/a_2.png" id="1_sacps"]
+[ext_resource type="Texture2D" uid="uid://dws8jx14wutet" path="res://assets/Abutton.png" id="2_mvikb"]
+
+[node name="a_1" type="Node2D"]
+script = ExtResource("1_3uaje")
+
+[node name="win screen" type="TextureButton" parent="."]
+offset_left = -3.0
+offset_top = 1727.0
+offset_right = 390.0
+offset_bottom = 1801.0
+scale = Vector2(2.73347, 2.21386)
+texture_normal = ExtResource("2_mvikb")
+
+[node name="a_2" type="TextureButton" parent="."]
+offset_left = 5.0
+offset_top = 1545.0
+offset_right = 398.0
+offset_bottom = 1619.0
+scale = Vector2(2.7259, 2.31127)
+texture_normal = ExtResource("2_mvikb")
+
+[node name="a_1" type="Sprite2D" parent="."]
+position = Vector2(529, 959)
+scale = Vector2(1.77284, 1.44382)
+texture = ExtResource("1_sacps")
+
+[connection signal="pressed" from="win screen" to="." method="_on_win_screen_pressed"]
+[connection signal="pressed" from="a_2" to="." method="_on_a_2_pressed"]

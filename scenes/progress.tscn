@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://dp25vl3v7cynu"]
+
+[ext_resource type="Script" uid="uid://cvsfis1ae2xnu" path="res://scripts/progress.gd" id="1_cfhae"]
+[ext_resource type="Texture2D" uid="uid://bvqpddqea0ywx" path="res://assets/Progression/Progress.png" id="1_f1jb4"]
+[ext_resource type="Texture2D" uid="uid://b7tdrichmg15i" path="res://assets/Progression/Glowing MeadowPark.png" id="2_85bu2"]
+[ext_resource type="Script" uid="uid://b5dd7jtko08v6" path="res://scripts/texture_button(meadow_park).gd" id="2_tqow5"]
+[ext_resource type="Texture2D" uid="uid://b5q8v1dwqu57y" path="res://assets/Progression/LockedSunnyBeach.png" id="6_d82lj"]
+[ext_resource type="FontFile" uid="uid://c0fecrpl10ccj" path="res://assets/scamSwipe/PixelifySans-VariableFont_wght.ttf" id="6_vkqrn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85bu2"]
+atlas = ExtResource("2_85bu2")
+
+[node name="Progress" type="Node2D"]
+scale = Vector2(1.00342, 1)
+script = ExtResource("1_cfhae")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.00162, 1)
+texture = ExtResource("1_f1jb4")
+
+[node name="TextureButton(MeadowPark)" type="TextureButton" parent="."]
+offset_left = -285.025
+offset_top = 220.0
+offset_right = 654.975
+offset_bottom = 1008.0
+scale = Vector2(0.762589, 0.692461)
+toggle_mode = true
+texture_pressed = SubResource("AtlasTexture_85bu2")
+script = ExtResource("2_tqow5")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton(SunnyBeach)" type="TextureButton" parent="."]
+offset_left = -291.005
+offset_top = -256.0
+offset_right = 282.995
+offset_bottom = 191.0
+texture_normal = ExtResource("6_d82lj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(1.4, 1.4)
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -433.517
+offset_top = 802.0
+offset_right = -393.517
+offset_bottom = 842.0
+scale = Vector2(5.19354, 2.72161)
+
+[node name="progress_points" type="Label" parent="."]
+offset_left = 208.288
+offset_top = 817.0
+offset_right = 251.288
+offset_bottom = 842.0
+scale = Vector2(3.24117, 3.05691)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vkqrn")
+theme_override_font_sizes/font_size = 20
+text = "XXX"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="TextureButton(MeadowPark)" to="." method="_on_texture_button_meadow_park_pressed"]
+[connection signal="pressed" from="TextureButton(SunnyBeach)" to="." method="_on_texture_button_sunny_beach_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

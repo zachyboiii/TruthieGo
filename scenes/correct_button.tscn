@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp6b2xpgdftmt"]
+
+[ext_resource type="Texture2D" uid="uid://dcxcfkunbo6x5" path="res://assets/realbutton.png" id="1_363kl"]
+
+[node name="correct_button" type="TextureButton"]
+texture_normal = ExtResource("1_363kl")

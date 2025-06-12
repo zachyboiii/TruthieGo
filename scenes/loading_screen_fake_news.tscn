@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b06mjatdh2l1u"]
+
+[ext_resource type="Texture2D" uid="uid://dpkim8ycblvn1" path="res://assets/fakeNewsGame/loading_image.png" id="1_enl0r"]
+[ext_resource type="Texture2D" uid="uid://de2afaphqunkf" path="res://assets/fakeNewsGame/loading_words.png" id="2_u2ewb"]
+
+[node name="loading_screen_fake_news" type="Node2D"]
+
+[node name="loading_image" type="Sprite2D" parent="."]
+position = Vector2(553, 954)
+scale = Vector2(1.84039, 1.5099)
+texture = ExtResource("1_enl0r")
+
+[node name="loading_words" type="Sprite2D" parent="."]
+position = Vector2(588, 310)
+scale = Vector2(2.27056, 2.27056)
+texture = ExtResource("2_u2ewb")

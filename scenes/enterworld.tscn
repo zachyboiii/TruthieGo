@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0cequdxjww4y"]
+
+[ext_resource type="Texture2D" uid="uid://b84ps2f7a25n6" path="res://TRUTHIE GO HOME.jpg" id="1_hu8gp"]
+
+[node name="enterworld" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_hu8gp")

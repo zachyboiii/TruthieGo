@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cranndf8cfdmg"]
+
+[ext_resource type="Script" uid="uid://cripkxyu6yw15" path="res://scripts/scam_swipe_instructions.gd" id="1_q7te7"]
+[ext_resource type="Texture2D" uid="uid://dkiwami46kmrf" path="res://assets/scamSwipe/scam_swipe_instructions.png" id="1_wmfls"]
+[ext_resource type="Texture2D" uid="uid://6icrf5t0snbg" path="res://assets/scamSwipe/scam_swipe_title.png" id="2_q7te7"]
+[ext_resource type="Texture2D" uid="uid://bichbcg2jsyxu" path="res://assets/scamSwipe/scamSwipe_start.png" id="3_d4wwq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4wwq"]
+atlas = ExtResource("3_d4wwq")
+region = Rect2(14.5379, 26.2146, 97.5642, 52.6444)
+
+[node name="scamSwipe_instructions" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_q7te7")
+
+[node name="ScamSwipeInstructions" type="Sprite2D" parent="."]
+position = Vector2(-0.999998, -1.90735e-06)
+scale = Vector2(0.609335, 0.630789)
+texture = ExtResource("1_wmfls")
+
+[node name="ScamSwipeTitle" type="Sprite2D" parent="."]
+position = Vector2(-7.62939e-06, -154)
+scale = Vector2(0.350596, 0.320418)
+texture = ExtResource("2_q7te7")
+
+[node name="startButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -48.0
+offset_top = 148.0
+offset_right = 49.0
+offset_bottom = 200.0
+texture_normal = SubResource("AtlasTexture_d4wwq")

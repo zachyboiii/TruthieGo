@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq3em158ndk"]
+
+[ext_resource type="Script" uid="uid://2cpxhggp41ur" path="res://scripts/login_page.gd" id="1_q1lwy"]
+[ext_resource type="Texture2D" uid="uid://1me8xjs7u52p" path="res://assets/login/empty_button.png" id="2_q1lwy"]
+[ext_resource type="Texture2D" uid="uid://dmpciwjbno5jp" path="res://assets/login/login_page.png" id="3_q1lwy"]
+
+[node name="LoginPage" type="Node2D"]
+script = ExtResource("1_q1lwy")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -373.0
+offset_top = 388.0
+offset_right = 20.0
+offset_bottom = 462.0
+scale = Vector2(1.91002, 1.81022)
+texture_normal = ExtResource("2_q1lwy")
+metadata/_edit_use_anchors_ = true
+
+[node name="LoginPage" type="Sprite2D" parent="."]
+position = Vector2(1, 2.00002)
+scale = Vector2(1.53561, 1.2783)
+texture = ExtResource("3_q1lwy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(2, 0)
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

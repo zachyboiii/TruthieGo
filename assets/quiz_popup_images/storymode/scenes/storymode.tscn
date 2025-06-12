@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckxvqvh23ycy6"]
+
+[ext_resource type="Script" uid="uid://csartwbljvww0" path="res://scripts/storymode.gd" id="1_a076d"]
+[ext_resource type="Texture2D" uid="uid://csjm8hiew1omd" path="res://assets/storystart.png" id="1_g6g50"]
+[ext_resource type="PackedScene" uid="uid://s63433kyi8ee" path="res://scenes/story_start.tscn" id="2_iiyvc"]
+
+[node name="storymode" type="Node2D"]
+script = ExtResource("1_a076d")
+
+[node name="story_start" parent="." instance=ExtResource("2_iiyvc")]
+
+[node name="unknown_uncle" type="Sprite2D" parent="."]
+position = Vector2(11, 0)
+scale = Vector2(1.53638, 1.53638)
+texture = ExtResource("1_g6g50")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -557.0
+offset_top = -1198.0
+offset_right = 157.0
+offset_bottom = 354.0
+scale = Vector2(1.59373, 1.49803)
+texture_normal = ExtResource("1_g6g50")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -577.0
+offset_top = -1176.0
+offset_right = -537.0
+offset_bottom = -1136.0
+scale = Vector2(28.8372, 65.4977)
+color = Color(0.746266, 0.92544, 1, 0.54902)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
